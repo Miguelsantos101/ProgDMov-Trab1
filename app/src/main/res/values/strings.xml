@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Project-1-ProgMov</string>
+    <string name="exit">Exit application</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Welcome to Terror Legends!"</string>
+    <string name="second_fragment_label">Characters</string>
+    <string name="third_fragment_label">Horror Movies</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="explanation">
+        This app will show you horror movie characters and their famous songs!
+    </string>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Trabalho-1-ProgMov</string>
+    <string name="exit">Sair do aplicativo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Bem-vindo ao Terror Legends!</string>
+    <string name="second_fragment_label">Personagens</string>
+    <string name="third_fragment_label">Filmes</string>
+    <string name="next">Próximo</string>
+    <string name="previous">Anterior</string>
+
+    <string name="explanation">
+        Esse aplicativo vai te mostrar personagens de filmes de terror e suas músicas famosas!
+    </string>
+</resources>
