@@ -36,6 +36,11 @@ public class SecondFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment)
         );
 
+        binding.buttonSecond2.setOnClickListener(v ->
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_thirdFragment)
+        );
+
         int[] list = new int[]{R.drawable.a_jason_voorhees, R.drawable.b_freddy_krueger,
                 R.drawable.c_michael_myers, R.drawable.d_ghostface,
                 R.drawable.e_billy_the_puppet, R.drawable.f_the_thing
@@ -83,5 +88,4 @@ public class SecondFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
 }

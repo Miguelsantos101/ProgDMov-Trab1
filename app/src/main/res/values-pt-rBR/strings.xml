@@ -7,8 +7,80 @@
     <string name="third_fragment_label">Filmes</string>
     <string name="next">Próximo</string>
     <string name="previous">Anterior</string>
+    <string name="year">Ano: </string>
+    <string name="poster">Poster</string>
+    <string name="description">Descrição do Filme</string>
 
     <string name="explanation">
         Esse aplicativo vai te mostrar personagens de filmes de terror e suas músicas famosas!
+    </string>
+
+    <string-array name="list_years">
+        <item>1978</item>
+        <item>1980</item>
+        <item>1982</item>
+        <item>1984</item>
+        <item>1996</item>
+        <item>2004</item>
+    </string-array>
+
+    <string-array name="list_1978_movies">
+        <item>Halloween - A Noite do Terror</item>
+    </string-array>
+
+    <string-array name="list_1980_movies">
+        <item>Sexta-Feira 13</item>
+    </string-array>
+
+    <string-array name="list_1982_movies">
+        <item>O Enigma de Outro Mundo</item>
+    </string-array>
+
+    <string-array name="list_1984_movies">
+        <item>A Hora do Pesadelo</item>
+    </string-array>
+
+    <string-array name="list_1996_movies">
+        <item>Pânico</item>
+    </string-array>
+
+    <string-array name="list_2004_movies">
+        <item>Jogos Mortais</item>
+    </string-array>
+
+    <string name="halloween_description">
+        &lt;b&gt;Halloween - A Noite do Terror (1978)&lt;/b&gt;&lt;br&gt;
+        Michael Myers escapa de um hospital psiquiátrico e retorna à sua cidade natal para aterrorizar adolescentes na noite de Halloween.&lt;br&gt;
+        Um clássico do terror slasher dirigido por John Carpenter.
+    </string>
+
+    <string name="friday_the_13th_description">
+        &lt;b&gt;Sexta-Feira 13 (1980)&lt;/b&gt;&lt;br&gt;
+        O Campo Crystal Lake é reaberto apesar de seu passado sombrio.&lt;br&gt;
+        Monitores do acampamento começam a morrer misteriosamente em uma das franquias mais icônicas do terror.
+    </string>
+
+    <string name="the_thing_description">
+        &lt;b&gt;O Enigma de Outro Mundo (1982)&lt;/b&gt;&lt;br&gt;
+        Em uma base na Antártica, uma criatura alienígena mutante coloca todos contra todos ao imitar suas vítimas.&lt;br&gt;
+        Suspense paranoico e claustrofóbico dirigido por John Carpenter.
+    </string>
+
+    <string name="nightmare_on_elm_street_description">
+        &lt;b&gt;A Hora do Pesadelo (1984)&lt;/b&gt;&lt;br&gt;
+        Adolescentes são perseguidos em seus sonhos por Freddy Krueger, um assassino com luvas de lâminas.&lt;br&gt;
+        Um pesadelo que se torna mortal se você dormir.
+    </string>
+
+    <string name="scream_description">
+        &lt;b&gt;Pânico (1996)&lt;/b&gt;&lt;br&gt;
+        Um assassino mascarado começa a matar adolescentes em uma pequena cidade, enquanto brinca com as regras dos filmes de terror.&lt;br&gt;
+        Mistura de suspense, metalinguagem e humor negro.
+    </string>
+
+    <string name="saw_description">
+        &lt;b&gt;Jogos Mortais (2004)&lt;/b&gt;&lt;br&gt;
+        Duas pessoas acordam presas em um banheiro com instruções mortais.&lt;br&gt;
+        O assassino Jigsaw testa a vontade de viver de suas vítimas com jogos cruéis e sádicos.
     </string>
 </resources>

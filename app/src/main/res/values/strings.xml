@@ -2,13 +2,85 @@
     <string name="app_name">Project-1-ProgMov</string>
     <string name="exit">Exit application</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">Welcome to Terror Legends!"</string>
+    <string name="first_fragment_label">Welcome to Terror Legends!</string>
     <string name="second_fragment_label">Characters</string>
     <string name="third_fragment_label">Horror Movies</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="year">Year: </string>
+    <string name="poster">Poster</string>
+    <string name="description">Movie Description</string>
 
     <string name="explanation">
         This app will show you horror movie characters and their famous songs!
+    </string>
+
+    <string-array name="list_years">
+        <item>1978</item>
+        <item>1980</item>
+        <item>1982</item>
+        <item>1984</item>
+        <item>1996</item>
+        <item>2004</item>
+    </string-array>
+
+    <string-array name="list_1978_movies">
+        <item>Halloween</item>
+    </string-array>
+
+    <string-array name="list_1980_movies">
+        <item>Friday the 13th</item>
+    </string-array>
+
+    <string-array name="list_1982_movies">
+        <item>The Thing</item>
+    </string-array>
+
+    <string-array name="list_1984_movies">
+        <item>Nightmare on Elm Street</item>
+    </string-array>
+
+    <string-array name="list_1996_movies">
+        <item>Scream</item>
+    </string-array>
+
+    <string-array name="list_2004_movies">
+        <item>Saw</item>
+    </string-array>
+
+    <string name="halloween_description">
+        &lt;b&gt;Halloween (1978)&lt;/b&gt;&lt;br&gt;
+        Michael Myers escapes from a mental institution and returns to his hometown to terrorize teens on Halloween night.&lt;br&gt;
+        A slasher classic directed by John Carpenter.
+    </string>
+
+    <string name="friday_the_13th_description">
+        &lt;b&gt;Friday the 13th (1980)&lt;/b&gt;&lt;br&gt;
+        Camp Crystal Lake reopens despite its dark history.&lt;br&gt;
+        Camp counselors begin dying mysteriously in this iconic horror franchise.
+    </string>
+
+    <string name="the_thing_description">
+        &lt;b&gt;The Thing (1982)&lt;/b&gt;&lt;br&gt;
+        At a remote Antarctic base, a shape-shifting alien creature turns everyone against each other.&lt;br&gt;
+        A paranoid and claustrophobic thriller directed by John Carpenter.
+    </string>
+
+    <string name="nightmare_on_elm_street_description">
+        &lt;b&gt;Nightmare on Elm Street (1984)&lt;/b&gt;&lt;br&gt;
+        Teenagers are hunted in their dreams by Freddy Krueger, a killer with bladed gloves.&lt;br&gt;
+        If you fall asleep, the nightmare becomes deadly.
+    </string>
+
+    <string name="scream_description">
+        &lt;b&gt;Scream (1996)&lt;/b&gt;&lt;br&gt;
+        A masked killer begins murdering teens in a small town, playing with the rules of horror movies.&lt;br&gt;
+        A mix of suspense, self-awareness, and dark humor.
+    </string>
+
+    <string name="saw_description">
+        &lt;b&gt;Saw (2004)&lt;/b&gt;&lt;br&gt;
+        Two men wake up trapped in a bathroom with deadly instructions.&lt;br&gt;
+        The Jigsaw killer tests his victim’s will to live through cruel and twisted games.
     </string>
 </resources>
