@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Trabalho-1-ProgMov</string>
-    <string name="exit">Sair do aplicativo</string>
+    <string name="exit">Sair do aplicativo</string>]
+    <string name="light_theme">Tema Claro</string>
+    <string name="dark_theme">Tema Escuro</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Bem-vindo ao Terror Legends!</string>
     <string name="second_fragment_label">Personagens</string>

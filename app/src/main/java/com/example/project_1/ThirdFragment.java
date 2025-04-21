@@ -16,7 +16,6 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.project_1.databinding.FragmentThirdBinding;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 
@@ -38,6 +37,7 @@ public class ThirdFragment extends Fragment {
         return binding.getRoot();
     }
 
+    @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -56,7 +56,6 @@ public class ThirdFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedYear = parent.getItemAtPosition(position).toString();
                 updateMovieList(selectedYear);
-                updatePosterAndDescription(selectedMovie);
             }
 
             @Override
@@ -70,10 +69,10 @@ public class ThirdFragment extends Fragment {
         });
         //Load the initial data.
         updateMovieList(selectedYear);
-        updatePosterAndDescription(selectedMovie);
     }
 
     private void initializeMovieData() {
+        // English movie titles and descriptions
         movieImageMap.put("Halloween", R.drawable.a_halloween_1978_poster);
         movieImageMap.put("Friday the 13th", R.drawable.b_friday_the_13th_1980_poster);
         movieImageMap.put("The Thing", R.drawable.c_the_thing_1982_poster);
@@ -87,85 +86,74 @@ public class ThirdFragment extends Fragment {
         movieDescriptionMap.put("Nightmare on Elm Street", R.string.nightmare_on_elm_street_description);
         movieDescriptionMap.put("Scream", R.string.scream_description);
         movieDescriptionMap.put("Saw", R.string.saw_description);
+
+        // Portuguese movie titles and descriptions
+        movieImageMap.put("Halloween - A Noite do Terror", R.drawable.a_halloween_1978_poster);
+        movieImageMap.put("Sexta-Feira 13", R.drawable.b_friday_the_13th_1980_poster);
+        movieImageMap.put("O Enigma de Outro Mundo", R.drawable.c_the_thing_1982_poster);
+        movieImageMap.put("A Hora do Pesadelo", R.drawable.d_a_nightmare_on_elm_street_1984_poster);
+        movieImageMap.put("Pânico", R.drawable.e_scream_1996_poster);
+        movieImageMap.put("Jogos Mortais", R.drawable.f_saw_2004_poster);
+
+        movieDescriptionMap.put("Halloween - A Noite do Terror", R.string.halloween_description);
+        movieDescriptionMap.put("Sexta-Feira 13", R.string.friday_the_13th_description);
+        movieDescriptionMap.put("O Enigma de Outro Mundo", R.string.the_thing_description);
+        movieDescriptionMap.put("A Hora do Pesadelo", R.string.nightmare_on_elm_street_description);
+        movieDescriptionMap.put("Pânico", R.string.scream_description);
+        movieDescriptionMap.put("Jogos Mortais", R.string.saw_description);
     }
 
-private void updatePosterAndDescription(String movie) {
-    Integer imageResourceId = movieImageMap.get(movie);
-    Integer descriptionResourceId = movieDescriptionMap.get(movie);
+    private void updatePosterAndDescription(String movie) {
+        Integer imageResourceId = movieImageMap.get(movie);
+        Integer descriptionResourceId = movieDescriptionMap.get(movie);
 
-    if (imageResourceId != null && descriptionResourceId != null) {
-        binding.imageView.setImageResource(imageResourceId);
-        Spanned description = Html.fromHtml(getString(descriptionResourceId), Html.FROM_HTML_MODE_LEGACY);
-        binding.textView.setText(description);
-    } else {
-        // Handle the case where no data is found for the selected movie
-        binding.imageView.setImageResource(R.drawable.a_halloween_1978_poster); // Default image
-        binding.textView.setText(R.string.halloween_description); // Default description
-    }
-}
-
-private void updateMovieList(String year) {
-    int movieArrayResourceId = getMovieArrayResourceId(year);
-
-    if (movieArrayResourceId != 0) {
-        ArrayAdapter<CharSequence> movieAdapter = ArrayAdapter.createFromResource(
-                requireActivity(), movieArrayResourceId, android.R.layout.simple_list_item_1);
-        binding.listView.setAdapter(movieAdapter);
-        if (movieAdapter.getCount() > 0) {
-            //Change the list depending on the language.
-            String firstMovie = Objects.requireNonNull(movieAdapter.getItem(0)).toString();
-            if (Locale.getDefault().getLanguage().equals("pt")) {
-                switch (firstMovie) {
-                    case "Halloween - A Noite do Terror":
-                        firstMovie = "Halloween";
-                        break;
-                    case "Sexta-Feira 13":
-                        firstMovie = "Friday the 13th";
-                        break;
-                    case "O Enigma de Outro Mundo":
-                        firstMovie = "The Thing";
-                        break;
-                    case "A Hora do Pesadelo":
-                        firstMovie = "Nightmare on Elm Street";
-                        break;
-                    case "Pânico":
-                        firstMovie = "Scream";
-                        break;
-                    case "Jogos Mortais":
-                        firstMovie = "Saw";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            selectedMovie = firstMovie;
+        if (imageResourceId != null && descriptionResourceId != null) {
+            binding.imageView.setImageResource(imageResourceId);
+            Spanned description = Html.fromHtml(getString(descriptionResourceId), Html.FROM_HTML_MODE_LEGACY);
+            binding.textView.setText(description);
+        } else {
+            // Handle the case where no data is found for the selected movie
+            binding.imageView.setImageResource(R.drawable.a_halloween_1978_poster); // Default image
+            binding.textView.setText(R.string.halloween_description); // Default description
         }
-        updatePosterAndDescription(selectedMovie);
     }
-}
 
-private int getMovieArrayResourceId(String year) {
-    switch (year) {
-        case "1978":
-            return R.array.list_1978_movies;
-        case "1980":
-            return R.array.list_1980_movies;
-        case "1982":
-            return R.array.list_1982_movies;
-        case "1984":
-            return R.array.list_1984_movies;
-        case "1996":
-            return R.array.list_1996_movies;
-        case "2004":
-            return R.array.list_2004_movies;
-        default:
-            return 0;
+    private void updateMovieList(String year) {
+        int movieArrayResourceId = getMovieArrayResourceId(year);
+
+        if (movieArrayResourceId != 0) {
+            ArrayAdapter<CharSequence> movieAdapter = ArrayAdapter.createFromResource(
+                    requireActivity(), movieArrayResourceId, android.R.layout.simple_list_item_1);
+            binding.listView.setAdapter(movieAdapter);
+            if (movieAdapter.getCount() > 0){
+                selectedMovie = Objects.requireNonNull(movieAdapter.getItem(0)).toString();
+                updatePosterAndDescription(selectedMovie);
+            }
+        }
     }
-}
 
-@Override
-public void onDestroyView() {
-    super.onDestroyView();
-    binding = null;
-}
+    private int getMovieArrayResourceId(String year) {
+        switch (year) {
+            case "1978":
+                return R.array.list_1978_movies;
+            case "1980":
+                return R.array.list_1980_movies;
+            case "1982":
+                return R.array.list_1982_movies;
+            case "1984":
+                return R.array.list_1984_movies;
+            case "1996":
+                return R.array.list_1996_movies;
+            case "2004":
+                return R.array.list_2004_movies;
+            default:
+                return 0;
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

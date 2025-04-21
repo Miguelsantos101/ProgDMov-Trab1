@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Project-1-ProgMov</string>
     <string name="exit">Exit application</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Welcome to Terror Legends!</string>
     <string name="second_fragment_label">Characters</string>
